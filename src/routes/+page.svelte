@@ -33,8 +33,7 @@
 <section class="about">
 	<div class="logo-div">
 		<img src={logo} alt="Logo" class="logo" />
-		<img src={logo} alt="Logo" class="logo" />
-		<img src={logo} alt="Logo" class="logo" />
+
 	</div>
 	<div class="text">
 		<h2>
