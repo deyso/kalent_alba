@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte'
-	import '../style.css'
 	import Menubar from './components/Menubar.svelte'
 	import Footer from './components/Footer.svelte'
 	import TabDescriber from './components/TabDescriber.svelte'
@@ -33,7 +32,6 @@
 <section class="about">
 	<div class="logo-div">
 		<img src={logo} alt="Logo" class="logo" />
-
 	</div>
 	<div class="text">
 		<h2>
