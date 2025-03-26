@@ -3,8 +3,7 @@
 	import { goto } from '$app/navigation'
 	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
-
-	let isMobileMenuOpen = false
+	import { clickOutside } from '$lib/clickOutside.js'
 
 	const navbarItems = [
 		{ name: 'RÓLUNK', href: '/about' },
@@ -16,10 +15,18 @@
 
 	let currentPath
 	$: currentPath = `/${$page.url.pathname.split('/')[1]}`
+
+	let isMobileMenuOpen = false
+	let navbarRef
+	let toggleButtonRef
 </script>
 
 <!-- NAVBAR -->
-<div class="navbar bg-white shadow-sm px-2 md:px-2 lg:px-10 xl:px-14 2xl:px-24 relative z-50">
+<div
+	class="navbar bg-white shadow-sm px-2 md:px-2 lg:px-10 xl:px-14 2xl:px-24 relative z-50"
+	bind:this={navbarRef}
+	use:clickOutside={{ callback: () => (isMobileMenuOpen = false), exclude: [toggleButtonRef] }}
+>
 	<div class="flex-1">
 		<a href="/" class="flex items-center gap-2">
 			<img src={logo} alt="Logo" class="h-18 md:h-18 lg:h-28 xl:h-38 2xl:h-42 w-auto" />
@@ -28,7 +35,7 @@
 
 	<!-- Hamburger (mobile only) -->
 	<div class="flex-none md:hidden">
-		<button on:click={() => (isMobileMenuOpen = !isMobileMenuOpen)} class="p-2 focus:outline-none focus:ring-0 active:bg-transparent hover:bg-transparent">
+		<button bind:this={toggleButtonRef} on:click={() => (isMobileMenuOpen = !isMobileMenuOpen)} class="p-2 focus:outline-none focus:ring-0 active:bg-transparent hover:bg-transparent">
 			{#if isMobileMenuOpen}
 				<!-- X icon -->
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,7 +60,7 @@
 							goto(item.href)
 							isMobileMenuOpen = false
 						}}
-						class={`m-0 p-0 md:text-xs	 lg:text-base xl:text-xl 2xl:text-2xl font-semibold text-green-800 py-4 px-6 border-b border-white w-full text-left transition-all duration-200`}
+						class={`m-0 p-0 md:text-xs lg:text-base xl:text-xl 2xl:text-2xl font-semibold text-green-800 py-4 px-6 border-b border-white w-full text-left transition-all duration-200`}
 					>
 						{item.name}
 					</button>

@@ -12,13 +12,13 @@
 <footer class="w-full text-white font-sans m-0 p-0">
 	<!-- Top Section -->
 	<div class="bg-[#3d7140] text-center">
-		<p class="py-10 font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wider">
+		<p class="py-5 font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wider">
 			Velünk <strong class="font-bold">mindig</strong> biztosra mehet!
 		</p>
 	</div>
 
 	<!-- Middle Section -->
-	<div class="bg-[#1f1f1f] flex flex-col md:flex-row justify-center items-center w-full px-4 py-10 gap-10">
+	<div class="bg-[#1f1f1f] flex flex-col md:flex-row justify-center items-center w-full px-4 py-5 gap-10">
 		<!-- Logo container -->
 		<a href="/" class="flex items-center gap-2">
 			<img src={darkLogo} alt="Logo" class="h-28 md:h-28 lg:h-34 xl:h-38 2xl:h-42 w-auto" />

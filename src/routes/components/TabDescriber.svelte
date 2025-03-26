@@ -3,7 +3,7 @@
 	export let contentText
 </script>
 
-<div class="relative w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] xl:h-[350px] bg-cover bg-[center_60%] overflow-hidden" style={`background-image: url('${workingManImg}')`}>
+<div class="relative w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] xl:h-[350px] bg-cover bg-[center_80%] overflow-hidden" style={`background-image: url('${workingManImg}')`}>
 	<!-- Overlay -->
 	<div class="absolute inset-0 bg-[#3d7140]/90 z-10"></div>
 
