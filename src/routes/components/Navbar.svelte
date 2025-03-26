@@ -1,24 +1,28 @@
 <script>
 	import logo from '$lib/logo.png'
+	import { goto } from '$app/navigation'
+	import { page } from '$app/stores'
+	import { onMount } from 'svelte'
 
 	let isMobileMenuOpen = false
 
 	const navbarItems = [
-		{ name: 'RÓLUNK', href: '/' },
-		{ name: 'MIVEL FOGLALKOZUNK', href: '/about' },
-		{ name: 'BÜSZKESÉGFAL', href: '/buszkesegfal' },
+		{ name: 'RÓLUNK', href: '/about' },
+		{ name: 'MIVEL FOGLALKOZUNK', href: '/work' },
+		{ name: 'BÜSZKESÉGFAL', href: '/our-pride' },
 		{ name: 'BLOG', href: '/blog' },
-		{ name: 'KAPCSOLAT', href: '/kapcsolat' }
+		{ name: 'KAPCSOLAT', href: '/connections' }
 	]
 
-	const currentPath = '/about' // You can get this dynamically from a router too
+	let currentPath
+	$: currentPath = `/${$page.url.pathname.split('/')[1]}`
 </script>
 
 <!-- NAVBAR -->
-<div class="navbar bg-white shadow-sm px-2 md:px-4 lg:px-12 xl:px-16 2xl:px-24 relative z-50">
+<div class="navbar bg-white shadow-sm px-2 md:px-2 lg:px-10 xl:px-14 2xl:px-24 relative z-50">
 	<div class="flex-1">
 		<a href="/" class="flex items-center gap-2">
-			<img src={logo} alt="Logo" class="h-18 md:h-24 lg:h-34 xl:h-38 2xl:h-42 w-auto" />
+			<img src={logo} alt="Logo" class="h-18 md:h-18 lg:h-28 xl:h-38 2xl:h-42 w-auto" />
 		</a>
 	</div>
 
@@ -44,9 +48,15 @@
 		<ul class="menu menu-horizontal px-1">
 			{#each navbarItems as item}
 				<li>
-					<a href={item.href} class="md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl font-semibold text-black hover:font-bold transition-all duration-200">
+					<button
+						on:click={() => {
+							goto(item.href)
+							isMobileMenuOpen = false
+						}}
+						class={`m-0 p-0 md:text-xs	 lg:text-base xl:text-xl 2xl:text-2xl font-semibold text-green-800 py-4 px-6 border-b border-white w-full text-left transition-all duration-200`}
+					>
 						{item.name}
-					</a>
+					</button>
 				</li>
 			{/each}
 		</ul>

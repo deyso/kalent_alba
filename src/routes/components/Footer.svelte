@@ -28,7 +28,7 @@
 		<ul class="list-none leading-relaxed text-sm sm:text-base md:text-lg space-y-2">
 			{#each companyDetails as item}
 				<li class="flex items-start gap-2">
-					<img src={item.icon} class="w-5 h-5 mt-1 [filter:brightness(0)_saturate(100%)_invert(43%)_sepia(17%)_saturate(2757%)_hue-rotate(60deg)_brightness(104%)_contrast(80%)]" />
+					<img src={item.icon} alt="kalent-logo" class="w-5 h-5 mt-1 [filter:brightness(0)_saturate(100%)_invert(43%)_sepia(17%)_saturate(2757%)_hue-rotate(60deg)_brightness(104%)_contrast(80%)]" />
 					<span>{item.text}</span>
 				</li>
 			{/each}

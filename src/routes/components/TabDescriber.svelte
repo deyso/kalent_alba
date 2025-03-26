@@ -1,44 +1,16 @@
 <script>
+	import workingManImg from '$lib/working_man.jpg'
 	export let contentText
 </script>
 
-<div class="background-div">
-	<div class="content-div">
-		<div class="content">{contentText}</div>
+<div class="relative w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] xl:h-[350px] bg-cover bg-[center_60%] overflow-hidden" style={`background-image: url('${workingManImg}')`}>
+	<!-- Overlay -->
+	<div class="absolute inset-0 bg-[#3d7140]/90 z-10"></div>
+
+	<!-- Content -->
+	<div class="relative z-20 flex items-center h-full px-4 sm:px-12 md:px-20">
+		<div class="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl p-5">
+			{contentText}
+		</div>
 	</div>
 </div>
-
-<style>
-	.background-div {
-		position: relative;
-		background-image: url('$lib/working_man.jpg');
-		background-size: cover;
-		background-position: 100% 60%;
-		height: 300px;
-		width: 100%;
-		color: black;
-		overflow: hidden;
-	}
-
-	.background-div::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background-color: #3d7140e8; /* green with light opacity */
-		z-index: 1;
-	}
-	.content-div {
-		display: flex;
-		align-items: center;
-		height: 100%;
-		padding: 0 100px;
-		font-weight: bold;
-	}
-	.content {
-		position: relative;
-		z-index: 2;
-		color: white;
-		font-size: 3rem;
-		padding: 20px;
-	}
-</style>
