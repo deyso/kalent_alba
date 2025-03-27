@@ -5,6 +5,9 @@
 	import velding from '$lib/velding.jpg'
 	import edge_sealing from '$lib/edge_sealing.jpg'
 	import entrance from '$lib/entrance.jpg'
+	import office from '$lib/office.jpg'
+	import cupboard from '$lib/cupboard.jpg'
+	import working_man2 from '$lib/working_man2.jpg'
 </script>
 
 <TabDescriber contentText="Mivel foglalkozunk" />
@@ -26,14 +29,15 @@
 				<img src={entrance} alt="Logo" class="h-28 max-[563px]:h-20 md:h-40 lg:h-30 xl:h-35 2xl:h-50 w-auto rounded-tl-[3vw] rounded-br-[3vw]" />
 			</div>
 			<div class="flex flex-col items-center gap-1">
-				<img src={kitchen} alt="Logo" class="h-28 max-[563px]:h-20 md:h-40 lg:h-30 xl:h-35 2xl:h-50 w-auto rounded-tl-[3vw] rounded-br-[3vw]" />
+				<img src={cupboard} alt="Logo" class="h-28 max-[563px]:h-20 md:h-40 lg:h-30 xl:h-35 2xl:h-50 w-auto rounded-tl-[3vw] rounded-br-[3vw]" />
 			</div>
 			<div class="flex flex-col items-center gap-1">
-				<img src={velding} alt="Logo" class="h-28 max-[563px]:h-20 md:h-40 lg:h-30 xl:h-35 2xl:h-50 w-auto rounded-tl-[3vw] rounded-br-[3vw]" />
+				<img src={office} alt="Logo" class="h-28 max-[563px]:h-20 md:h-40 lg:h-30 xl:h-35 2xl:h-50 w-auto rounded-tl-[3vw] rounded-br-[3vw]" />
 			</div>
 		</div>
 	</div>
 </div>
+
 <div class="flex flex-col lg:flex-row w-full bg-stone-100">
 	<div class="w-full lg:w-1/2 max-h-[200px] lg:max-h-[470px] md:h-auto overflow-hidden relative sm:z-30">
 		<img src={shop} alt="Üzletberendezés" class="w-full h-full object-cover rounded-br-[4rem]" />
@@ -48,6 +52,57 @@
 		</p>
 	</div>
 </div>
+
+<div class="w-full bg-white text-black py-12 px-6 lg:px-24 flex flex-col gap-12">
+	<div>
+		<h2 class="text-green-800 font-bold text-3xl lg:text-4xl">Lapszabászat</h2>
+	</div>
+
+	<div class="flex flex-col lg:flex-row gap-12">
+		<div class="lg:w-1/2 space-y-6">
+			<p class="text-base sm:text-lg md:text-xl leading-relaxed">
+				A profi és precíz lapszabászat a minőségi bútorgyártás alapja, hisz a pontos méretek és tökéletes élzárások garantálják a hosszú élettartamot, valamint a kiváló megjelenést.
+			</p>
+			<p class="text-base sm:text-lg md:text-xl leading-relaxed">
+				A Kalent-Alba Kft. az általa gyártott berendezések mellett lapszabászati, és éllezécési szolgáltatásokat kínál minden meglévő és új partnere számára.
+			</p>
+		</div>
+
+		<div class="lg:w-1/2 space-y-4">
+			<h3 class="text-green-800 font-semibold text-lg sm:text-xl md:text-2xl">A szolgáltatások díja az alábbiak szerint alakul:</h3>
+			<div class="flex flex-col md:flex-row text-base sm:text-base md:text-sm lg:text-lg gap-12">
+				<div>
+					<h4 class="text-red-600 font-semibold mb-2">Lapmegmunkálás:</h4>
+					<ul class="space-y-1">
+						<li>Bútorlap szabás fm: 1500 Ft/m²</li>
+						<li>Ferde vágás: 700 Ft/db</li>
+						<li>Hátlap nútolás/facolás: 315 Ft/fm</li>
+						<li>Pánthelymarás: 100 Ft/db</li>
+						<li>CNC megmunkálás: 21.500 Ft/óra</li>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="text-red-600 font-semibold mb-2">Élzárás:</h4>
+					<ul class="space-y-1">
+						<li>ABS 22/0,4-0,8-2 mm: 300 Ft/fm</li>
+						<li>ABS 28/2 mm: 450 Ft/fm</li>
+						<li>ABS 42/2 mm: 600 Ft/fm</li>
+						<li>Íves élzárás: 1400 Ft/fm</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<p class="text-center text-base sm:text-lg md:text-xl leading-relaxed pt-8">
+			A fentieken túlmenően az alapanyagok tekintetében is igen nagyfokú rugalmassággal rendelkezünk, ugyanis akár hozott-, akár<br />
+			nálunk vagy partnereinknél vásárolt anyagokból is megvalósítjuk Önnek elképzelését.
+		</p>
+	</div>
+</div>
+
 <div class="flex flex-col lg:flex-row w-full bg-stone-100">
 	<div class="w-full lg:w-1/2 flex flex-col justify-center gap-6 px-6 py-18 lg:px-16">
 		<h2 class="text-green-800 font-bold text-2xl sm:text-3xl xl:text-4xl">Éllécezés</h2>
@@ -64,5 +119,27 @@
 	</div>
 	<div class="w-full lg:w-1/2 max-h-[200px] lg:max-h-[470px] md:h-auto overflow-hidden relative sm:z-30">
 		<img src={edge_sealing} alt="Üzletberendezés" class="w-full h-full object-cover rounded-br-[4rem]" />
+	</div>
+</div>
+
+<div class="flex flex-col lg:flex-row w-full bg-stone-100 py-12 px-6 lg:px-20 gap-8">
+	<!-- Kép -->
+	<div class="w-full lg:w-1/2 max-h-[200px] lg:max-h-[470px] overflow-hidden relative rounded-tl-[4rem] rounded-br-[4rem]">
+		<img src={working_man2} alt="working_man" class="w-full h-full object-cover" />
+	</div>
+
+	<!-- Szöveg -->
+	<div class="w-full lg:w-1/2 flex flex-col justify-center gap-4 lg:gap-6 text-black">
+		<h2 class="text-green-800 font-bold text-2xl sm:text-3xl xl:text-4xl">CNC megmunkálás</h2>
+		<p class="text-base text-sm sm:text-base xl:text-lg leading-relaxed">
+			A bútoriparban a minőség és a precizitás kulcsfontosságú, és a CNC megmunkálás révén cégünk a legmodernebb technológiákat alkalmazza a tökéletes végeredmény eléréséhez.
+		</p>
+		<p class="text-base text-sm sm:text-base xl:text-lg leading-relaxed">
+			Ez a módszer lehetővé teszi számunkra, hogy minden egyes bútor alkatrészt a legapróbb részletekig pontosan alakítsunk ki, biztosítva a kiváló minőséget és a tartósságot.
+		</p>
+		<p class="text-base text-sm sm:text-base xl:text-lg leading-relaxed">
+			Az automatikus vezérlés segítségével minimalizálhatók az emberi hibák, így minden egyes darab tökéletesen illeszkedik, és a kívánt dizájn kifogástalanul megvalósul.
+		</p>
+		<p class="text-base text-sm sm:text-base xl:text-lg leading-relaxed">Lépjen velünk kapcsolatba, és hozzuk létre együtt az Ön elképzeléseit, a legújabb CNC megmunkálás segítségével!</p>
 	</div>
 </div>

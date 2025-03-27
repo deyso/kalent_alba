@@ -16,13 +16,13 @@
 
 	<!-- Image + text 1 -->
 	<div class="flex flex-col items-center text-center w-full xl:w-1/3">
-		<img src={handshake} alt="Handshake" class="w-full rounded-tl-[2rem] rounded-br-[2rem] object-cover" />
+		<img src={handshake} alt="Handshake" class="w-full rounded-tl-[3.5rem] rounded-br-[3.5rem] object-cover" />
 		<p class="text-green-800 text-sm sm:text-base xl:text-lg mt-4 leading-relaxed">Hiszünk abban, hogy az üzleti siker alapja az elégedett ügyfél és a tartós, megbízható minőség.</p>
 	</div>
 
 	<!-- Image + text 2 -->
 	<div class="flex flex-col items-center text-center w-full xl:w-1/3">
-		<img src={measuring} alt="Measuring" class="w-full rounded-tl-[2rem] rounded-br-[2rem] object-cover" />
+		<img src={measuring} alt="Measuring" class="w-full rounded-tl-[3.5rem] rounded-br-[3.5rem] object-cover" />
 		<p class="text-green-800 text-sm sm:text-base xl:text-lg mt-4 leading-relaxed">
 			Ezért minden projektünket a legapróbb részletekig átgondoljuk, és olyan megoldásokat kínálunk, amelyek hosszú távon is bizonyítanak.
 		</p>
