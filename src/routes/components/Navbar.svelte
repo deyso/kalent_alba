@@ -3,13 +3,14 @@
 	import { goto } from '$app/navigation'
 	import { page } from '$app/stores'
 	import { clickOutside } from '$lib/clickOutside.js'
+	import api from '../store/api'
 
 	const navbarItems = [
-		{ name: 'RÓLUNK', href: '/about' },
-		{ name: 'MIVEL FOGLALKOZUNK', href: '/work' },
-		{ name: 'BÜSZKESÉGFAL', href: '/our-pride' },
-		{ name: 'BLOG', href: '/blog' },
-		{ name: 'KAPCSOLAT', href: '/connections' }
+		{ name: 'RÓLUNK', href: `${api}/about` },
+		{ name: 'MIVEL FOGLALKOZUNK', href: `${api}/work` },
+		{ name: 'BÜSZKESÉGFAL', href: `${api}/our-pride` },
+		{ name: 'BLOG', href: `${api}/blog` },
+		{ name: 'KAPCSOLAT', href: `${api}/connections` }
 	]
 
 	let currentPath
@@ -27,7 +28,7 @@
 	use:clickOutside={{ callback: () => (isMobileMenuOpen = false), exclude: [toggleButtonRef] }}
 >
 	<div class="flex-1">
-		<a href="/" class="flex items-center gap-2">
+		<a href={`${api}/main`} class="flex items-center gap-2">
 			<img src={logo} alt="Logo" class="h-18 md:h-18 lg:h-28 xl:h-38 2xl:h-42 w-auto" />
 		</a>
 	</div>
