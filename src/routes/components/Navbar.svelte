@@ -14,7 +14,7 @@
 	]
 
 	let currentPath
-	$: currentPath = `/${$page.url.pathname.split('/')[1]}`
+	$: currentPath = `${api}/${$page.url.pathname.split('/')[2]}`
 
 	let isMobileMenuOpen = false
 	let navbarRef

@@ -7,6 +7,7 @@
 	import pic4 from '$lib/pic4.jpg'
 	import pic5 from '$lib/pic5.jpg'
 	import pic8 from '$lib/pic8.jpg'
+	import api from '../store/api'
 
 	export const cards = [
 		{
@@ -65,7 +66,7 @@
 				<button
 					class="btn bg-green-700 hover:bg-green-800 text-white"
 					on:click={() => {
-						goto(`/blog/selected?id=${card.id}`)
+						goto(`${api}/blog/selected?id=${card.id}`)
 					}}>Tovább olvasom</button
 				>
 			</div>
