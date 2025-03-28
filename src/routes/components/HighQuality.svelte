@@ -1,9 +1,11 @@
 <script>
 	import handshake from '$lib/handshake.jpg'
 	import measuring from '$lib/measuring.jpg'
+
+	export let bgcolor
 </script>
 
-<div class="py-10 xl:py-30 px-4 xl:px-20 flex flex-col xl:flex-row gap-10 items-start justify-evenly mx-auto">
+<div class={`${bgcolor} py-10 xl:py-30 px-4 xl:px-20 flex flex-col xl:flex-row gap-10 items-start justify-evenly mx-auto`}>
 	<!-- Left text block -->
 	<div class="flex flex-col w-full xl:w-1/3">
 		<h2 class="text-green-800 font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight">

@@ -1,22 +1,23 @@
 <script>
 	import darkLogo from '$lib/dark_logo.png'
 	import icons from '$lib/icons'
+	import { page } from '$app/stores'
+
 	const companyDetails = [
 		{ icon: icons.location, text: '8000 Székesfehérvár, Kereszttöltés u. 4358/5.' },
 		{ icon: icons.phone, text: 'Számlázás, pénzügy: +36 30 682 8880' },
 		{ icon: icons.phone, text: 'Felmérés, árajánlat: +36 30 226 3443' },
 		{ icon: icons.email, text: 'info@kalent-alba.hu' }
 	]
+	import EnsureWithUs from './EnsureWithUs.svelte'
+	$: currentPath = `/${$page.url.pathname.split('/')[1]}`
 </script>
 
 <footer class="w-full text-white font-sans m-0 p-0">
 	<!-- Top Section -->
-	<div class="bg-[#3d7140] text-center">
-		<p class="py-5 font-montserrat text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wider">
-			Velünk <strong class="font-bold">mindig</strong> biztosra mehet!
-		</p>
-	</div>
-
+	{#if !currentPath.includes('main')}
+		<EnsureWithUs />
+	{/if}
 	<!-- Middle Section -->
 	<div class="bg-[#1f1f1f] flex flex-col md:flex-row justify-center items-center w-full px-4 py-5 gap-10">
 		<!-- Logo container -->

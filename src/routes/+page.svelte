@@ -1,4 +1,4 @@
 <script>
 	import { goto } from '$app/navigation'
-	goto('/')
+	goto('/main')
 </script>

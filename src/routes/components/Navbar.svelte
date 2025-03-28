@@ -2,7 +2,6 @@
 	import logo from '$lib/logo.png'
 	import { goto } from '$app/navigation'
 	import { page } from '$app/stores'
-	import { onMount } from 'svelte'
 	import { clickOutside } from '$lib/clickOutside.js'
 
 	const navbarItems = [
